@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Совы | Админка</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Главное меню">
+      <a class="village-mark" href="index.html" aria-label="Совы, главная страница">
+        <span class="mark-rune">
+          <img src="assets/owl-icon.png" alt="">
+        </span>
+        <span>
+          <strong>Совы</strong>
+          <small>Деревня у старого тракта</small>
+        </span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html" data-page="index">Наша деревня</a>
+        <a href="wiki.html" data-page="wiki">Совы-вики</a>
+        <a href="head.html" data-page="head">Уголок старосты</a>
+        <a href="beer.html" data-page="beer">По пиву?</a>
+        <a href="surprise.html" data-page="surprise">Сюрприз!</a>
+      </nav>
+    </aside>
+
+    <main class="parchment">
+      <section class="page-heading">
+        <p class="eyebrow">Служебный вход</p>
+        <h1>Админка</h1>
+      </section>
+
+      <section class="text-content admin-panel">
+        <form class="admin-form" data-admin-login-form>
+          <label>
+            <span>Логин</span>
+            <input type="text" name="login" autocomplete="username">
+          </label>
+
+          <label>
+            <span>Пароль</span>
+            <input type="password" name="password" autocomplete="current-password">
+          </label>
+
+          <div class="admin-login-result" data-admin-login-result aria-live="polite"></div>
+
+          <div class="admin-form__actions">
+            <button type="submit">Авторизация</button>
+            <button class="button-secondary" type="button" data-admin-forgot-open>Я забыл</button>
+          </div>
+        </form>
+      </section>
+
+      <div class="admin-reset-modal" data-admin-reset-modal hidden>
+        <div class="admin-reset-modal__backdrop" data-admin-reset-close></div>
+        <form class="admin-reset-modal__dialog" data-admin-reset-form role="dialog" aria-modal="true" aria-labelledby="admin-reset-title">
+          <h2 id="admin-reset-title">Восстановление доступа</h2>
+
+          <label>
+            <span>Контрольный вопрос</span>
+            <p class="security-question">Человек, который мне больше всего не нравится</p>
+          </label>
+          
+
+          <label>
+            <span>Ответ на контрольный вопрос</span>
+            <input type="text" name="security_answer" autocomplete="off">
+          </label>
+
+          <div class="admin-reset-result" data-admin-reset-result aria-live="polite">
+            Введите ответ и отправьте форму.
+          </div>
+
+          <div class="admin-reset-modal__actions">
+            <button class="button-secondary" type="button" data-admin-reset-close>Закрыть</button>
+            <button type="submit">Проверить</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="admin-settings-modal" data-admin-settings-modal hidden>
+        <div class="admin-settings-modal__backdrop" data-admin-settings-cancel></div>
+        <form class="admin-settings-modal__dialog" data-admin-settings-form role="dialog" aria-modal="true" aria-labelledby="admin-settings-title" novalidate>
+          <h2 id="admin-settings-title">Настройки системы</h2>
+
+          <fieldset>
+            <legend>Настройки совопередачи</legend>
+
+            <label>
+              <span>Частота отправки сов</span>
+              <input type="number" name="freq" step="1">
+            </label>
+
+            <label>
+              <span>Количество повторных отправок сов</span>
+              <input type="number" name="retries" step="1">
+            </label>
+
+            <label>
+              <span>Количество сов в одном пакете</span>
+              <input type="number" name="batch" step="1">
+            </label>
+
+            <label>
+              <span>Время ожидания возвращения совы</span>
+              <input type="number" name="timeout" step="1">
+            </label>
+          </fieldset>
+
+          <label>
+            <span>Вторая половина ключа</span>
+            <input type="text" name="second_half" autocomplete="off">
+          </label>
+
+          <p class="form-error" data-admin-settings-error hidden></p>
+
+          <div class="admin-settings-modal__actions">
+            <button class="button-secondary" type="button" data-admin-settings-cancel>Отменить</button>
+            <button type="submit">Сохранить</button>
+          </div>
+        </form>
+      </div>
+
+      <img class="owl-illustration" src="assets/admin.png" alt="" aria-hidden="true">
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+    "freq": 5,
+    "retries": 10,
+    "batch": 4,
+    "timeout": 10
+}

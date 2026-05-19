@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Совы | Совы-вики</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Главное меню">
+      <a class="village-mark" href="index.html" aria-label="Совы, главная страница">
+        <span class="mark-rune">
+          <img src="assets/owl-icon.png" alt="">
+        </span>
+        <span>
+          <strong>Совы</strong>
+          <small>Деревня у старого тракта</small>
+        </span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html" data-page="index">Наша деревня</a>
+        <a href="wiki.html" data-page="wiki">Совы-вики</a>
+        <a href="head.html" data-page="head">Уголок старосты</a>
+        <a href="beer.html" data-page="beer">По пиву?</a>
+        <a href="surprise.html" data-page="surprise">Сюрприз!</a>
+      </nav>
+    </aside>
+
+    <main class="parchment">
+      <section class="page-heading">
+        <p class="eyebrow">Летопись и слухи</p>
+        <h1>Совы-вики</h1>
+      </section>
+      <article class="text-content wiki-article">
+        <p>
+          <strong>Совы</strong> - небольшая лесная деревня у старого тракта, известная крепкими хозяйствами,
+          спокойным нравом жителей и привычкой решать важные вопросы за общим столом в местной таверне. В
+          дорожных заметках странников Совы чаще всего описывают как надежное место для ночлега, обмена новостями
+          и пополнения припасов перед долгой дорогой через леса.
+        </p>
+
+        <h2>Краткая история</h2>
+        <p>
+          По деревенскому преданию, Совы выросли из маленького сторожевого поста, поставленного на опушке для
+          охраны тракта и ближайших пашен. Первые дома строили охотники, лесорубы и семьи земледельцев, которым
+          было важно держаться рядом: лес давал дичь и древесину, но требовал осторожности, смелости и хороших
+          соседей.
+        </p>
+        <p>
+          Со временем вокруг поста появились амбары, кузница, мельница и несколько дворов ремесленников. Деревня
+          не стала богатым городком, зато приобрела репутацию места, где слово старших уважают, работу делают
+          на совесть, а путнику не отказывают в миске горячей похлебки.
+        </p>
+
+        <h2>Флора и фауна</h2>
+        <p>
+          Совы окружены густыми лесами, где растут сосны, ели, березы, рябины и орешник. На прогалинах собирают
+          ягоды, лекарственные травы и грибы, а вдоль ручьев тянутся заросли ивняка. Лесные тропы хорошо знакомы
+          местным охотникам, но чужакам не советуют уходить далеко без проводника.
+        </p>
+        <p>
+          В окрестностях водятся волки, лисы, кабаны, косули, зайцы и множество птиц. Ночами над крышами часто
+          слышны совы, из-за которых деревня, как считают многие, и получила свое название. Волчьи стаи редко
+          подходят к домам, но зимой дозорам у края леса приходится быть особенно внимательными.
+        </p>
+
+        <h2>Хозяйство</h2>
+        <p>
+          Основу деревенского хозяйства составляют поля и огороды. Жители выращивают рожь, ячмень, овес, репу,
+          капусту, лук, бобы и лен. На солнечных склонах держат небольшие хмельники, а возле домов - яблони,
+          смородину и пряные травы. Часть урожая идет в амбары, часть - на обмен с заезжими торговцами и соседними
+          поселениями.
+        </p>
+
+        <h2>Досуг</h2>
+        <p>
+          После работы жители любят собираться у очага, слушать истории, играть в кости и спорить о погоде
+          так горячо, будто от этого зависит урожай. Но главным местом отдыха остается деревенская таверна: там
+          подают знаменитое местное пиво, обмениваются свежими слухами и знают, за каким столом сегодня громче всего
+          смеются.
+        </p>
+
+        <section class="wiki-stats" aria-label="Краткая статистика">
+          <dl>
+            <div>
+              <dt>Население деревни</dt>
+              <dd><span data-wiki-field="population">...</span> жителей</dd>
+            </div>
+            <div>
+              <dt>Год основания</dt>
+              <dd><span data-wiki-field="foundation">...</span></dd>
+            </div>
+            <div>
+              <dt>Средняя температура летом</dt>
+              <dd><span data-wiki-field="summer_temp">...</span></dd>
+            </div>
+            <div>
+              <dt>Средняя температура зимой</dt>
+              <dd><span data-wiki-field="winter_temp">...</span></dd>
+            </div>
+            <div>
+              <dt>Местность</dt>
+              <dd>смешанные леса, поля и старый тракт</dd>
+            </div>
+            <div>
+              <dt>Главное место встреч</dt>
+              <dd>местная таверна</dd>
+            </div>
+          </dl>
+        </section>
+
+        <p>
+          Наши данные устарели? Вы можете помочь нашей вики, отредактировав статистическую информацию!
+        </p>
+
+        <button class="edit-wiki-button" type="button" data-wiki-edit-open>Редактировать</button>
+      </article>
+
+      <div class="wiki-edit-modal" data-wiki-edit-modal hidden>
+        <div class="wiki-edit-modal__backdrop" data-wiki-edit-cancel></div>
+        <form class="wiki-edit-modal__dialog" data-wiki-edit-form role="dialog" aria-modal="true" aria-labelledby="wiki-edit-title" novalidate>
+          <h2 id="wiki-edit-title">Редактирование сводки</h2>
+
+          <label>
+            <span>Количество жителей</span>
+            <input type="number" name="population" min="0" step="1" inputmode="numeric" required>
+          </label>
+
+          <label>
+            <span>Год основания</span>
+            <input type="number" name="foundation" min="0" step="1" inputmode="numeric" required>
+          </label>
+
+          <label>
+            <span>Температура летом</span>
+            <input type="number" name="summer_temp" step="0.1" inputmode="decimal" required>
+          </label>
+
+          <label>
+            <span>Температура зимой</span>
+            <input type="number" name="winter_temp" step="0.1" inputmode="decimal" required>
+          </label>
+
+          <p class="form-error" data-wiki-edit-error hidden></p>
+
+          <div class="wiki-edit-modal__actions">
+            <button class="button-secondary" type="button" data-wiki-edit-cancel>Отменить</button>
+            <button type="submit">Сохранить</button>
+          </div>
+        </form>
+      </div>
+      <img class="owl-illustration" src="assets/book.png" alt="" aria-hidden="true">
+    </main>
+  </div>
+</body>
+</html>

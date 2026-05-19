@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Совы | Сюрприз!</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Главное меню">
+      <a class="village-mark" href="index.html" aria-label="Совы, главная страница">
+        <span class="mark-rune">
+          <img src="assets/owl-icon.png" alt="">
+        </span>
+        <span>
+          <strong>Совы</strong>
+          <small>Деревня у старого тракта</small>
+        </span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html" data-page="index">Наша деревня</a>
+        <a href="wiki.html" data-page="wiki">Совы-вики</a>
+        <a href="head.html" data-page="head">Уголок старосты</a>
+        <a href="beer.html" data-page="beer">По пиву?</a>
+        <a href="surprise.html" data-page="surprise">Сюрприз!</a>
+      </nav>
+    </aside>
+
+    <main class="parchment">
+      <section class="page-heading">
+        <p class="eyebrow">Запечатанный свиток</p>
+        <h1>Сюрприз!</h1>
+      </section>
+      <section class="surprise-content" aria-labelledby="surprise-title">
+        <div class="story-placeholder" id="surprise-title">
+          Юля, эта страничка специально для тебя! В знак благодарности за популяризацию своей деревни
+          жители Сов подготовили для тебя сюрприз в твой День Рождения! Но чтобы добраться до него
+          нужен ключ... Отыщи две его половины и открой секретный свиток!
+        </div>
+
+        <form class="key-form" data-key-form>
+          <label>
+            <span>Первая половина ключа</span>
+            <input type="text" name="first_half" autocomplete="off" required>
+          </label>
+
+          <label>
+            <span>Вторая половина ключа</span>
+            <input type="text" name="second_half" autocomplete="off" required>
+          </label>
+
+          <button type="submit">Ввести ключ!</button>
+        </form>
+      </section>
+
+      <div class="key-modal" data-key-modal hidden>
+        <div class="key-modal__backdrop" data-modal-close></div>
+        <div class="key-modal__dialog" role="dialog" aria-modal="true" aria-label="Результат проверки ключа">
+          <button class="key-modal__close" type="button" data-modal-close aria-label="Закрыть">×</button>
+          <img data-modal-image src="" alt="">
+        </div>
+      </div>
+      <img class="owl-illustration" src="assets/scroll.png" alt="" aria-hidden="true">
+    </main>
+  </div>
+</body>
+</html>
